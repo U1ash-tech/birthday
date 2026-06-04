@@ -1109,7 +1109,6 @@ body {
     transform-style: preserve-3d;
     transform-origin: left;
     transition: all 1s;
-    transform: rotateY(180deg);
 }
 .boxMail .boxMail-container .card2 .card2-content {
     width: 100%;
