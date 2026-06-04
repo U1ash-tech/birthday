@@ -1051,6 +1051,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     border: 1px solid black;
+    backface-visibility: hidden;
 }
 .boxMail .boxMail-container .card1 {
     position: absolute;
@@ -1108,6 +1109,7 @@ body {
     transform-style: preserve-3d;
     transform-origin: left;
     transition: all 1s;
+    transform: rotateY(180deg);
 }
 .boxMail .boxMail-container .card2 .card2-content {
     width: 100%;
@@ -1115,9 +1117,13 @@ body {
     position: relative;
     background-color: #FF7882;
     transition: all 1s;
-    overflow: hidden;
+    overflow: auto;
     font-family: "Inter", serif;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;
 }
 .boxMail .boxMail-container:hover .card2-content{
     transform: translate(20px, 20px);
@@ -1126,8 +1132,8 @@ body {
 .boxMail .boxMail-container .card2 h3{
     font-family: 'Dancing Script', cursive;
     padding: 20px 0px 10px 60px;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+    visibility: visible;
     font-size: 20px;
     text-shadow: 0 0 8px #FF7882;
 }
@@ -1153,7 +1159,7 @@ body {
     padding: 0px 20px;
     text-indent: 20px;
     font-size: 18px;
-    opacity: 0;
+    opacity: 1;
 }
 .boxMail .boxMail-container .card2:hover h2{
     animation: texth2 2s forwards;
@@ -1172,7 +1178,7 @@ body {
     position: absolute;
     top: 5px;
     left: 20px;
-    opacity: 0;
+    opacity: 1;
     transition: 1s;
 }
 .boxMail .boxMail-container .card2 .card2-content:hover .imageCute2{
